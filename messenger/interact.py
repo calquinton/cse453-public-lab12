@@ -63,7 +63,7 @@ class Interact:
     ##################################################
     def show(self):
         id_ = self._prompt_for_id("display")
-        if not self._p_messages.show(id_):
+        if not self._p_messages.show(id_, User.user_control):
             print(f"ERROR! Message ID \'{id_}\' does not exist")
         print()
 

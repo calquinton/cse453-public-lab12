@@ -35,10 +35,10 @@ class Messages:
     # MESSAGES :: SHOW
     # Show a single message
     ################################################## 
-    def show(self, id):
+    def show(self, id, user_control):
         for m in self._messages:
             if m.get_id() == id:
-                m.display_text()
+                m.display_text(user_control)
                 return True
         return False
 

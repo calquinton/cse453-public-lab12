@@ -64,8 +64,8 @@ class Message:
     # MESSAGE :: DISPLAY TEXT
     # Display the contents or the text of the message
     ################################################## 
-    def display_text(self):
-        # if control.security_condition_read(self._text_control)
+    def display_text(self, user_control):
+        if control.Control.security_condition_read(self._text_control, user_control):
             print(f"\tMessage: {self._text}")
 
     ##################################################
