@@ -19,12 +19,19 @@ class User:
         self.password = password
         self.user_control = user_control
 
+'''
+Control levels:
+Public = 0
+Confidential = 1
+Privileged = 2
+Secret = 3
+'''
 userlist = [
-   [ "AdmiralAbe",     "password" ],  
-   [ "CaptainCharlie", "password" ], 
-   [ "SeamanSam",      "password" ],
-   [ "SeamanSue",      "password" ],
-   [ "SeamanSly",      "password" ]
+   [ "AdmiralAbe",     "password", 3],  
+   [ "CaptainCharlie", "password", 2], 
+   [ "SeamanSam",      "password", 1],
+   [ "SeamanSue",      "password", 1],
+   [ "SeamanSly",      "password", 1]
 ]
 
 ###############################################################
