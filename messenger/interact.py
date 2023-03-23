@@ -124,7 +124,11 @@ class Interact:
     ################################################## 
     def _authenticate(self, username, password):
         id_ = self._id_from_user(username)
-        return ID_INVALID != id_ and password == users[id_].password
+        
+        if id_ == ID_INVALID or password != users[id_].password:
+            return ID_INVALID
+        else:
+            return users[id_].user_control
 
     ##################################################
     # INTERACT :: ID FROM USER
