@@ -14,9 +14,10 @@ import messages, control
 # User has a name and a password
 ###############################################################
 class User:
-    def __init__(self, name, password):
+    def __init__(self, name, password, user_control):
         self.name = name
         self.password = password
+        self.user_control = user_control
 
 userlist = [
    [ "AdmiralAbe",     "password" ],  
