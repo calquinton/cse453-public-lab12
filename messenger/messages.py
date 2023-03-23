@@ -46,10 +46,10 @@ class Messages:
     # MESSAGES :: UPDATE
     # Update a single message
     ################################################## 
-    def update(self, id, text):
+    def update(self, id, text, user_control):
         for m in self._messages:
             if m.get_id() == id:
-                m.update_text(text)
+                m.update_text(text, user_control)
 
     ##################################################
     # MESSAGES :: REMOVE

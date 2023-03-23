@@ -94,7 +94,7 @@ class Interact:
         if not self._p_messages.show(id_):
             print(f"ERROR! Message ID \'{id_}\' does not exist\n")
             return
-        self._p_messages.update(id_, self._prompt_for_line("message"))
+        self._p_messages.update(id_, self._prompt_for_line("message"), User.user_control)
         print()
             
     ##################################################

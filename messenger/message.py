@@ -72,8 +72,9 @@ class Message:
     # MESSAGE :: UPDATE TEXT
     # Update the contents or text of the message
     ################################################## 
-    def update_text(self, new_text):
-        self._text = new_text
+    def update_text(self, new_text, user_control):
+        if control.Control.security_condition_write(self._text_control, user_control):
+            self._text = new_text
 
     ##################################################
     # MESSAGE :: CLEAR
