@@ -65,7 +65,8 @@ class Message:
     # Display the contents or the text of the message
     ################################################## 
     def display_text(self):
-        print(f"\tMessage: {self._text}")
+        # if control.security_condition_read(self._text_control)
+            print(f"\tMessage: {self._text}")
 
     ##################################################
     # MESSAGE :: UPDATE TEXT
