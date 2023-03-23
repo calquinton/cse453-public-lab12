@@ -9,13 +9,14 @@
 
 # you may need to put something here...
 class Control:
-    def __init__(self, public, confidential, secret, top_secret):
-        if Value == 1:
-            Control_Level = "Confidental"
-        if Value == 2:
-            Control_Level = "Privledged"
-        if Value == 3:
-            Control_Level = "Secret"
-        else:
-            Control_Level = "Public"
-        pass
+    def __init__(self, text_control, user_control, security_condition_read, security_condition_write):
+        self.text_control = text_control
+        self.user_control = user_control
+        self.security_condition_read(text_control, user_control)
+        self.security_condition_write(text_control, user_control)
+
+    def security_condition_read(text_control, user_control):
+        return text_control <= user_control
+    
+    def security_condition_write(text_control, user_control):
+        return text_control >= user_control
