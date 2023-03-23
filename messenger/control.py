@@ -8,3 +8,6 @@
 ########################################################################
 
 # you may need to put something here...
+class Control:
+    def __init__(self, public, confidential, secret, top_secret):
+        pass
