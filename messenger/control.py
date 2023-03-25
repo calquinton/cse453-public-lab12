@@ -35,4 +35,4 @@ class Control:
             text_control = 2
         if text_control == "Secret":
             text_control = 3
-        return text_control >= user_control
+        return text_control > user_control
