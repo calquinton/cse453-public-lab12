@@ -53,7 +53,7 @@ class Interact:
     # Authenticate the user and get him/her all set up
     ##################################################
     def __init__(self, username, password, messages):
-        self._authenticate(username, password)
+        self.user_control = self._authenticate(username, password) #self._authenticate(username, password)
         self._username = username
         self._p_messages = messages
 
@@ -63,7 +63,7 @@ class Interact:
     ##################################################
     def show(self):
         id_ = self._prompt_for_id("display")
-        if not self._p_messages.show(id_, User.user_control):
+        if not self._p_messages.show(id_, self.user_control): #User.user_control
             print(f"ERROR! Message ID \'{id_}\' does not exist")
         print()
 
@@ -94,7 +94,7 @@ class Interact:
         if not self._p_messages.show(id_):
             print(f"ERROR! Message ID \'{id_}\' does not exist\n")
             return
-        self._p_messages.update(id_, self._prompt_for_line("message"), User.user_control)
+        self._p_messages.update(id_, self._prompt_for_line("message"), self.user_control) #User.user_control
         print()
             
     ##################################################

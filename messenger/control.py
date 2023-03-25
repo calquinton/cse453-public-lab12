@@ -16,7 +16,23 @@ class Control:
         self.security_condition_write(text_control, user_control)
 
     def security_condition_read(text_control, user_control):
+        if text_control == "Public":
+            text_control = 0
+        if text_control == "Confidential":
+            text_control = 1
+        if text_control == "Privileged":
+            text_control = 2
+        if text_control == "Secret":
+            text_control = 3
         return text_control <= user_control
     
     def security_condition_write(text_control, user_control):
+        if text_control == "Public":
+            text_control = 0
+        if text_control == "Confidential":
+            text_control = 1
+        if text_control == "Privileged":
+            text_control = 2
+        if text_control == "Secret":
+            text_control = 3
         return text_control >= user_control
